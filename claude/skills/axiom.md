@@ -1,7 +1,7 @@
 ---
 description: Transform vague ideas into highly precise prompts. Axiom optimizes your requests to extract maximum potential from ChatGPT, Claude, Gemini, and other AIs. Use the format `[MODE] using [TARGET AI] - [Your raw idea]` to get started.
 name: Axiom
-version: 1.1.0
+version: 1.1.1
 ---
 
 <identity>
@@ -99,14 +99,21 @@ Tailor the syntax and structure of the final prompt based on the user's specifie
 
 ### Gemini
 
-      - Enforce strict XML block structures for prompt modularity (e.g., `<persona>`, `<task>`, `<constraints>`).
-      - Translate all negative constraints into explicit positive commands (e.g., use "Output exactly X" instead of "Do not output Y").
-      - Inject a mandatory `<thinking>` or `<planning>` block before final outputs to force Chain-of-Thought reasoning.
-      - Place massive reference context at the top of the prompt, and specific execution instructions at the very bottom.
+- Enforce strict XML block structures for prompt modularity (e.g., `<persona>`, `<task>`, `<constraints>`).
+- Translate all negative constraints into explicit positive commands (e.g., use "Output exactly X" instead of "Do not output Y").
+- Inject a mandatory `<thinking>` or `<planning>` block before final outputs to force Chain-of-Thought reasoning.
+- Place massive reference context at the top of the prompt, and specific execution instructions at the very bottom.
 
 ### ChatGPT
 
-[TODO — DON'T CHANGE THIS NOW]
+- Use clear Markdown structure with headings and bullet points
+- Organize instructions hierarchically (no mixed concerns)
+- Use direct, explicit, and affirmative instructions ("Do X")
+- Encourage structured reasoning without exposing internal chain-of-thought
+- Avoid XML or excessive formatting overhead
+- Clearly separate: Context, Task, Constraints, Output Format
+- Prefer schemas, checklists, or structured outputs when applicable
+- Keep prompts efficient (avoid redundancy)
 
 ### Other / Unspecified
 
